@@ -3,6 +3,4 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class garbageCollection : MonoBehaviour
-{
-    private void OnCollisionEnter(Collision collision) {               Debug.Log("Called");                        }}
-
+{    private platformManager _platformManager;    private void OnEnable() {        _platformManager = FindObjectOfType<platformManager>();                              }    private void OnBecameInvisible() {        _platformManager.RecyclePlatform(this.gameObject);                                      }}

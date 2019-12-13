@@ -7,18 +7,19 @@ public class platformManager : MonoBehaviour
     [SerializeField]
     private GameObject[] platformPrefabs;
     [SerializeField]
-    private int amountOfPlatforms;
+    private int amountOfPlatforms = 0;
     [SerializeField]
-    private float platformLength;
+    private float platformLength = 0f;
     public float zOffset;
    
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < amountOfPlatforms; i++) {
+        for (int i = 0; i < platformPrefabs.Length; i++) {
 
-            Instantiate(platformPrefabs[0], new Vector3(0, 0, i * platformLength), Quaternion.identity);
+            Instantiate(platformPrefabs[i], new Vector3(0, 0, i * platformLength), Quaternion.identity);
             zOffset += platformLength;
+
         }
        
     }
