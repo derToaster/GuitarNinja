@@ -17,7 +17,7 @@ public class platformManager : MonoBehaviour
     {
         for (int i = 0; i < amountOfPlatforms; i++) {
 
-            Instantiate(platformPrefabs[0], new Vector3(0, -3, i * platformLength), Quaternion.Euler(-180,0,0));
+            Instantiate(platformPrefabs[0], new Vector3(0, 0, i * platformLength), Quaternion.identity);
             zOffset += platformLength;
         }
        
@@ -27,6 +27,6 @@ public class platformManager : MonoBehaviour
 
     public void RecyclePlatform(GameObject platform) {
 
-        platform.transform.position = new Vector3(0, -3, zOffset);        zOffset += platformLength;
+        platform.transform.position = new Vector3(0, 0, zOffset);        zOffset += platformLength;
 
     }}
