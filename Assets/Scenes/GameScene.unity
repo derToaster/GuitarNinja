@@ -150,10 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefabs:
-  - {fileID: 3960455411373865173, guid: 80aab88f8fcc44c50a84084afb35205a, type: 3}
+  - {fileID: 8935684891076210143, guid: 2b91b2470f3fc4d5584969c4712580a0, type: 3}
   - {fileID: 8224078068946420746, guid: 24a1bf9dfaa8747458cdf840705c9aea, type: 3}
   - {fileID: 5126109742297436405, guid: 6b30c371c321c42e9ab4e9f8bb478067, type: 3}
-  amountOfPlatforms: 7
+  - {fileID: 3960455411373865173, guid: 80aab88f8fcc44c50a84084afb35205a, type: 3}
+  amountOfStartPlatforms: 20
   platformLength: 15
   zOffset: 0
 --- !u!4 &998955583
