@@ -6,6 +6,19 @@ TagManager:
   tags:
   - GarbageCollector
   - Platform
+  - ObjectSpawner
+  - EmptyPlatform
+  - ColPlatMid
+  - ColPlatLeft
+  - ColPlatRight
+  - BPlatform
+  - NotePlatform
+  - SharpPlatform
+  - Note
+  - Pick
+  - Flat
+  - Sharp
+  - GameObjectQueue
   layers:
   - Default
   - TransparentFX
