@@ -14,6 +14,6 @@ public class playerMovement : MonoBehaviour {
         body = GetComponent<Rigidbody>();        camAnimationDuration = GameObject.Find("Main Camera").GetComponent<cameraMovement>().animationDuration;    }
 
     // Update is called once per frame
-    void Update() {        if (Time.time < camAnimationDuration) {            body.velocity = Vector3.forward * speed;            return;        }        verticalVelocity = -0.5f;        moveVector = Vector3.zero;        // X - Moving left or right        moveVector.x = Input.GetAxisRaw("Horizontal") * speed;        //Y - Up and Down        moveVector.y = verticalVelocity;        // Z- Forwart or Backward        moveVector.z = speed;        body.velocity = moveVector;    }    }        
+    void Update() {        if (Time.time < camAnimationDuration) {            body.velocity = Vector3.forward * speed;            return;        }        verticalVelocity = -0.5f;        moveVector = Vector3.zero;        // X - Moving left or right                moveVector.x = Input.GetAxisRaw("Horizontal") * speed;        //Y - Up and Down        moveVector.y = verticalVelocity;        // Z- Forwart or Backward        moveVector.z = speed;        body.velocity = moveVector;    }                                  }        
 
    
