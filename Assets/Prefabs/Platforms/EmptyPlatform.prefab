@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3401357115700247254}
   - component: {fileID: 5738953023043221640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EmptyPlatform
   m_TagString: EmptyPlatform
   m_Icon: {fileID: 0}

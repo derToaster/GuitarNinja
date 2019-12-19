@@ -10,4 +10,4 @@ public class Collector : MonoBehaviour
     {        objectSpawner = FindObjectOfType<ObjectSpawner>();
     }
 
-    private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.EMPTY_PLATFORM) ||           target.CompareTag(Tags.NOTE_PLATFORM) ||           target.CompareTag(Tags.COL_PLAT_MID) ||           target.CompareTag(Tags.COL_PLAT_RIGHT) ||           target.CompareTag(Tags.COL_PLAT_LEFT)) {                       target.gameObject.SetActive(false);            objectSpawner.RecycleObjects();        }    }                              }
+    private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.EMPTY_PLATFORM) ||           target.CompareTag(Tags.NOTE_PLATFORM) ||           target.CompareTag(Tags.COL_PLAT_MID) ||           target.CompareTag(Tags.COL_PLAT_RIGHT) ||           target.CompareTag(Tags.COL_PLAT_LEFT) ||           target.CompareTag(Tags.B_PLATFORM) ||           target.CompareTag(Tags.SHARP_PLATFORM)){                                  target.gameObject.SetActive(false);            objectSpawner.RecycleObjects();        }    }                              }

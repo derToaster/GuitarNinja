@@ -195,7 +195,7 @@ MonoBehaviour:
   - tag: EmptyPlatform
     prefab: {fileID: 7034591981499599134, guid: 160b48c5e9643489d9c4d3466c5e2718,
       type: 3}
-    size: 5
+    size: 10
   - tag: ColPlatMid
     prefab: {fileID: 8095227674009283580, guid: 80aab88f8fcc44c50a84084afb35205a,
       type: 3}
@@ -206,6 +206,18 @@ MonoBehaviour:
     size: 5
   - tag: ColPlatLeft
     prefab: {fileID: 8809176417213011802, guid: 6b30c371c321c42e9ab4e9f8bb478067,
+      type: 3}
+    size: 5
+  - tag: FlatPlatform
+    prefab: {fileID: 4478605422242830446, guid: 66c04d228c89649d58d276b25e4ccd0a,
+      type: 3}
+    size: 5
+  - tag: NotePlatform
+    prefab: {fileID: 6952943192657899460, guid: dd02fd1125b134c39956700ea67adc48,
+      type: 3}
+    size: 5
+  - tag: SharpPlatform
+    prefab: {fileID: 5720249055062572664, guid: 189dc14930cfb4ae69b310f4f8685f54,
       type: 3}
     size: 5
   tagList: []
@@ -252,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982670a249a524b378b241ac6a2fb1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfStartingPlatforms: 4
+  amountOfStartingPlatforms: 8
   platformLength: 15
 --- !u!4 &1568039207
 Transform:
