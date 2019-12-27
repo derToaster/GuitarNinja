@@ -19,7 +19,8 @@ public class RayCast : MonoBehaviour
 
         Debug.DrawRay(transform.position, Vector3.forward * raycastDistance);
 
-        if (Physics.Raycast(transform.position,transform.TransformDirection( Vector3.forward), out hit, raycastDistance)) {            Debug.Log("i see a " + hit.collider.tag);
+        if (Physics.Raycast(transform.position,transform.TransformDirection( Vector3.forward), out hit, raycastDistance)) {           Debug.Log("i see a " + hit.collider.tag);
+            
 
 
 

@@ -8,7 +8,7 @@ public class cameraMovement : MonoBehaviour
     private Transform playerTransform;    private Vector3 startOffset;
     private Vector3 camMoveVector;
 
-    private float transition = 0.0f;
+    private float transition ;
     public float animationDuration = 2.0f;
     private Vector3 animationCamOffset = new Vector3(0f, 9f, 9f);
 

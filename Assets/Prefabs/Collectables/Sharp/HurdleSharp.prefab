@@ -88,7 +88,8 @@ GameObject:
   m_Component:
   - component: {fileID: 819685843583907994}
   - component: {fileID: 6826587531221619450}
-  - component: {fileID: 650149877990973644}
+  - component: {fileID: -7683904995639050643}
+  - component: {fileID: -3838111782359350316}
   m_Layer: 0
   m_Name: HurdleSharp
   m_TagString: Sharp
@@ -120,12 +121,31 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4412193061273782921}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.64, y: 4.32, z: 1}
-  m_Center: {x: -1.53, y: 0, z: 0.48}
---- !u!114 &650149877990973644
+  m_Size: {x: 4.64, y: 4.32, z: 5.599474}
+  m_Center: {x: -1.53, y: 0, z: 0.056247354}
+--- !u!95 &-7683904995639050643
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412193061273782921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 524b7ff2c7fb546c4878814d414c50ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3838111782359350316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +154,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4412193061273782921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089508ebbf26345629841d6bd635334d, type: 3}
+  m_Script: {fileID: 11500000, guid: a20f6a567a0a14d1ea860829f9f9aa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canPressSharp: 0
+  sharpPoints: 5
+  jumpKey: 273
 --- !u!1 &7828155975102316985
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 261384532749118953}
   - component: {fileID: 5707053603790758798}
-  - component: {fileID: 3351798066177772080}
+  - component: {fileID: 7220800293425162312}
+  - component: {fileID: 3960928967609840185}
   m_Layer: 0
   m_Name: HurdleFlat
   m_TagString: Flat
@@ -44,9 +45,28 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.08, y: 4.23, z: 1}
-  m_Center: {x: -0.42, y: 0.8, z: 0}
---- !u!114 &3351798066177772080
+  m_Size: {x: 2.08, y: 11.969158, z: 4.918667}
+  m_Center: {x: -0.41999996, y: 1.1293268, z: -1.9593339}
+--- !u!95 &7220800293425162312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889920414786002938}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 250721a8118b24acfbfae8841707cae1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3960928967609840185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,9 +75,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3889920414786002938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089508ebbf26345629841d6bd635334d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b632d433b6974f18a8cd21eeafef7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canPressFlat: 0
+  flatPoints: 5
+  slideKey: 274
 --- !u!1 &7233825905899312330
 GameObject:
   m_ObjectHideFlags: 0
