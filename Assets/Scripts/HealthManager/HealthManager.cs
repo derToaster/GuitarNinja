@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +23,11 @@ public class HealthManager : MonoBehaviour
         
     // Update is called once per frame
     void Update() {
-        if (lifeIndicator.fillAmount <= 0f){            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_DEATH, true);            player.Death();            _gameManger.GameOver();
+        if (lifeIndicator.fillAmount <= 0f){
+
+            playerAnim.SetTrigger(Tags.ANIMATION_CONDITION_TRIGGER_DEATH);
+            player.Death();
+            _gameManger.GameOver();
 
             
         }
@@ -33,7 +36,13 @@ public class HealthManager : MonoBehaviour
 
 
 
-    public IEnumerator GettingHurt(Vector3 direction) {        if (lifeIndicator.fillAmount > 0.25f) {            lifeIndicator.fillAmount -= 0.25f;            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_HURT, true);            yield return new WaitForSeconds(0.3f);            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_HURT, false);            StartCoroutine(DoBlinks(invincibilityLength, 0.2f));
+    public IEnumerator GettingHurt(Vector3 direction) {
+        if (lifeIndicator.fillAmount > 0.25f) {
+            lifeIndicator.fillAmount -= 0.25f;
+            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_HURT, true);
+            yield return new WaitForSeconds(0.3f);
+            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_HURT, false);
+            StartCoroutine(DoBlinks(invincibilityLength, 0.2f));
         } else  { lifeIndicator.fillAmount -= 0.25f; }
 
         
@@ -42,7 +51,24 @@ public class HealthManager : MonoBehaviour
         
     }
 
-        IEnumerator DoBlinks(float duration, float blinkTime) {        while (duration > 0f) {            duration -= Time.deltaTime;            Debug.Log(duration);            Physics.IgnoreLayerCollision(9, 10, true);            //toggle renderer            playerRenderer.enabled = !playerRenderer.enabled;            //wait for a bit            yield return new WaitForSeconds(blinkTime);        }        //make sure renderer is enabled when we exit        playerRenderer.enabled = true;        Physics.IgnoreLayerCollision(9, 10, false);    }
+    
+
+    IEnumerator DoBlinks(float duration, float blinkTime) {
+        while (duration > 0f) {
+            duration -= Time.deltaTime;
+            Debug.Log(duration);
+            Physics.IgnoreLayerCollision(9, 10, true);
+            //toggle renderer
+            playerRenderer.enabled = !playerRenderer.enabled;
+
+            //wait for a bit
+            yield return new WaitForSeconds(blinkTime);
+        }
+
+        //make sure renderer is enabled when we exit
+        playerRenderer.enabled = true;
+        Physics.IgnoreLayerCollision(9, 10, false);
+    }
 
 
 

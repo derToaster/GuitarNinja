@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="GitHub" t="Include">
+            <e p="Editor" t="Include">
+              <e p="credits.txt" t="Include" />
+              <e p="eula.txt" t="Include" />
+              <e p="ExtensionLoader.cs" t="Include" />
+              <e p="UnityAPIWrapper.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Camera" t="Include">
+            <e p="cameraMovement.cs" t="Include" />
+          </e>
+          <e p="Collectables" t="Include">
+            <e p="Collectables.cs" t="Include" />
+            <e p="FlatScript.cs" t="Include" />
+            <e p="NoteScript.cs" t="Include" />
+            <e p="SharpScript.cs" t="Include" />
+          </e>
+          <e p="Collector" t="Include">
+            <e p="Collector.cs" t="Include" />
+          </e>
+          <e p="GameManager" t="Include">
+            <e p="GameManager.cs" t="Include" />
+          </e>
+          <e p="HealthManager" t="Include">
+            <e p="HealthManager.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="SpawnInterface" t="Include">
+              <e p="IPooledObjects.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ObjectSpawner" t="Include">
+            <e p="ObjectSpawner.cs" t="Include" />
+          </e>
+          <e p="ParticleSystem" t="Include">
+            <e p="CollectionEffect.cs" t="Include" />
+          </e>
+          <e p="PlatformPooling" t="Include">
+            <e p="GameObjectQueue.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="Interactions.cs" t="Include" />
+            <e p="NoteCatcher.cs" t="Include" />
+            <e p="playerMovement.cs" t="Include" />
+          </e>
+          <e p="PointSystem" t="Include">
+            <e p="PointSystem.cs" t="Include" />
+          </e>
+          <e p="Raycasting" t="Include">
+            <e p="RayCast.cs" t="Include" />
+          </e>
+          <e p="Tags" t="Include">
+            <e p="Tags.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="GuitarNinja.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_GuitarNinja.-687322419.00" t="ExcludeRecursive" />
+  </component>
+</project>
