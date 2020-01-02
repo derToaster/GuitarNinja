@@ -19,6 +19,11 @@ TagManager:
   - Flat
   - Sharp
   - GameObjectQueue
+  - NoteCatcher
+  - LifeIndicator
+  - UI
+  - GameManager
+  - Hitbox
   layers:
   - Default
   - TransparentFX
@@ -30,7 +35,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - Collectables
   - 
   - 
   - 

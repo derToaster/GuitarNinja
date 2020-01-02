@@ -45,7 +45,7 @@ public class FlatScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressFlat = true;            flatAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_FLAT_ROTATION, true);        }            }
     private void OnTriggerExit(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressFlat = false;                        playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SLIDE, false);
-        }    }
+            flatAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_FLAT_ROTATION, false);        }    }
        
 
 }

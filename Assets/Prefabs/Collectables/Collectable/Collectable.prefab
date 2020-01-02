@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5402533119049998320}
   - component: {fileID: -4646856577469986993}
   - component: {fileID: 2721800879283236555}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collectable
   m_TagString: Pick
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3533478737087646016}
   - component: {fileID: 6268562410686026947}
   - component: {fileID: 4381096917234131375}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

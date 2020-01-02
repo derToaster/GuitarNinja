@@ -197,7 +197,7 @@ Animator:
   m_GameObject: {fileID: 5720249055062572664}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e1f8978c3957455c85d66879b5263b1, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -301,12 +301,12 @@ PrefabInstance:
     - target: {fileID: 6826587531221619450, guid: 2ba432a28fd914fa79db8df603cd9517,
         type: 3}
       propertyPath: m_Size.y
-      value: 4.3200006
+      value: 8.19861
       objectReference: {fileID: 0}
     - target: {fileID: 6826587531221619450, guid: 2ba432a28fd914fa79db8df603cd9517,
         type: 3}
       propertyPath: m_Size.z
-      value: 10.573887
+      value: 7.796327
       objectReference: {fileID: 0}
     - target: {fileID: 6826587531221619450, guid: 2ba432a28fd914fa79db8df603cd9517,
         type: 3}
@@ -316,12 +316,12 @@ PrefabInstance:
     - target: {fileID: 6826587531221619450, guid: 2ba432a28fd914fa79db8df603cd9517,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.02573077
+      value: -1.2714362
       objectReference: {fileID: 0}
     - target: {fileID: 6826587531221619450, guid: 2ba432a28fd914fa79db8df603cd9517,
         type: 3}
       propertyPath: m_Center.y
-      value: 0
+      value: 1.9393036
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba432a28fd914fa79db8df603cd9517, type: 3}

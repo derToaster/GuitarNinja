@@ -32,7 +32,7 @@ public class NoteScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressNote = true;                   }    }
     private void OnTriggerExit(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressNote = false;                       playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_KICK, false);
-        }    }
-    private void OnDisable() {                    playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_NOTE_ROTATION, false);    }
+        }        if (target.CompareTag(Tags.NOTE_CATCHER)) {            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_NOTE_ROTATION, false);            gameObject.SetActive(false);        }    }
+    
 
 }

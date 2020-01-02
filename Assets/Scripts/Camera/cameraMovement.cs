@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class cameraMovement : MonoBehaviour
-{
+public class cameraMovement : MonoBehaviour {
 
     private Transform playerTransform;    private Vector3 startOffset;
     private Vector3 camMoveVector;
@@ -20,10 +17,6 @@ public class cameraMovement : MonoBehaviour
 
         startOffset = transform.position - playerTransform.position;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {        camMoveVector = playerTransform.position + startOffset;        // X        camMoveVector.x = 0;        // Y        camMoveVector.y = Mathf.Clamp(camMoveVector.y, 3, 5);        // Camera will only be able to follow the player on the Y axis between 3 and 5        if (transition > 1.0f) {            transform.position = camMoveVector;        } else {            //Animation at the Start of the game            transform.position = Vector3.Lerp(camMoveVector + animationCamOffset, camMoveVector, transition);            transition += Time.deltaTime * 1 / animationDuration;            transform.LookAt(playerTransform.position + Vector3.up);        }                
+    }    // Update is called once per frame    private void Update() {        camMoveVector = playerTransform.position + startOffset;        // X        camMoveVector.x = 0;        // Y        camMoveVector.y = Mathf.Clamp(camMoveVector.y, 3, 5);        // Camera will only be able to follow the player on the Y axis between 3 and 5        if (transition > 1.0f) {            transform.position = camMoveVector;        } else {            //Animation at the Start of the game            transform.position = Vector3.Lerp(camMoveVector + animationCamOffset, camMoveVector, transition);            transition += Time.deltaTime * 1 / animationDuration;            transform.LookAt(playerTransform.position + Vector3.up);        }                
     }
 }

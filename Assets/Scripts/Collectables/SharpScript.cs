@@ -19,8 +19,7 @@ public class SharpScript : MonoBehaviour
     {
         sharpAnim = GetComponent<Animator>();
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
-        points = FindObjectOfType<PointSystem>();
-    }
+        points = FindObjectOfType<PointSystem>();    }
 
     // Update is called once per frame
     void Update()
@@ -43,9 +42,9 @@ public class SharpScript : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressSharp = true;            sharpAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION, true);        }            }
+    private void OnTriggerEnter(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressSharp = true;            sharpAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION, true);                   }            }
     private void OnTriggerExit(Collider target) {        if (target.CompareTag(Tags.PLAYER)) {            canPressSharp = false;            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_JUMP, false);
-        }    }
+            sharpAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION, false);        }    }
     
 
 }
