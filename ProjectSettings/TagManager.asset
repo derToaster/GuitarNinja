@@ -24,6 +24,9 @@ TagManager:
   - UI
   - GameManager
   - Hitbox
+  - RestartButton
+  - ExitButton
+  - Transition
   layers:
   - Default
   - TransparentFX

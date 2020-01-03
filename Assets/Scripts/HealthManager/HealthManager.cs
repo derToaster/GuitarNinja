@@ -8,22 +8,20 @@ public class HealthManager : MonoBehaviour {
     public float invincibilityLength;
     public Renderer playerRenderer;
     private playerMovement player;
-    private GameManager _gameManger;
+    private GameManager gameManger;
 
     // Start is called before the first frame update
     void Start() {
         lifeIndicator = GameObject.FindGameObjectWithTag(Tags.LIFE_INDICATOR).GetComponent<Image>();
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
         player = FindObjectOfType<playerMovement>();
-        _gameManger = FindObjectOfType<GameManager>();
+        gameManger = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update() {
         if (lifeIndicator.fillAmount <= 0f) {
-            playerAnim.SetTrigger(Tags.ANIMATION_CONDITION_TRIGGER_DEATH);
             player.Death();
-            _gameManger.GameOver(); //TODO Implement this in ontriggerenter to save recources 
         }
     }
 
@@ -42,7 +40,7 @@ public class HealthManager : MonoBehaviour {
     }
 
 
-    IEnumerator DoBlinks(float duration, float blinkTime) {
+   private IEnumerator DoBlinks(float duration, float blinkTime) {
         while (duration > 0f) {
             duration -= Time.deltaTime;
             Physics.IgnoreLayerCollision(9, 10, true);

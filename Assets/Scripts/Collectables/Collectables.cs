@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Collectables : MonoBehaviour {
     private PointSystem _pointSystem;
@@ -24,6 +22,5 @@ public class Collectables : MonoBehaviour {
         }
     }
 
-    private void OnDisable() {
-    }
+  
 }

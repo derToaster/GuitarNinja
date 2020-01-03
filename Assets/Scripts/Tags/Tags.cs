@@ -39,7 +39,12 @@
 //Player
 
     public static string PLAYER = "Player";
+//Buttons
 
+    public static string RESTART_BUTTON = "RestartButton";
+    
+//Transition
+    public static string TRANSITION = "Transition";
 //AnimationControllerConditions
 
     public static string ANIMATION_CONDITION_BOOL_JUMP = "Jump";
@@ -47,6 +52,7 @@
     public static string ANIMATION_CONDITION_BOOL_KICK = "Kick";
     public static string ANIMATION_CONDITION_BOOL_HURT = "Hurt";
     public static string ANIMATION_CONDITION_TRIGGER_DEATH = "Death";
+    public static string ANIMATION_CONDITION_TRIGGER_FADE_OUT = "FadeOut";
     public static string ANIMATION_CONDIDION_BOOL_COLLECTED = "Collected";
     public static string ANIMATION_CONDITION_BOOL_FLAT_ROTATION = "FlatRotation";
     public static string ANIMATION_CONDITION_BOOL_SHARP_ROTATION = "SharpRotation";
