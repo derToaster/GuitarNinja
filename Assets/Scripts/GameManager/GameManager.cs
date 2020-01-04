@@ -15,13 +15,24 @@ public class GameManager : MonoBehaviour {
             gameHasEnded = true;
           
         }
-        transition.FadeToLevel(0);
+        transition.FadeToLevel(2);
     }
 
     public void Restart() {
         transition.FadeToLevel(1);
     }
-   
+
+    public void TitleMenu() {
+        
+        transition.FadeToLevel(0);
+        
+    }
+
+    public void Quit() {
+        
+        
+        Application.Quit();
+    }
     
    
 }
