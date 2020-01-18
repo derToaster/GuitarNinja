@@ -7,6 +7,7 @@ public class SharpScript : MonoBehaviour {
     public bool canPressSharp;
     public int sharpPoints;
     private PointSystem points;
+    private Cooldown QTE;
 
     public KeyCode jumpKey;
 
@@ -16,32 +17,23 @@ public class SharpScript : MonoBehaviour {
         sharpAnim = GetComponent<Animator>();
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
         points = FindObjectOfType<PointSystem>();
+        QTE = FindObjectOfType<Cooldown>();
     }
 
-    // Update is called once per frame
-    void Update() {
-        if (Input.GetKeyDown(jumpKey)) {
-            if (canPressSharp) {
-                Debug.Log("Sharp Hit");
-                playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_JUMP, true);
-                points.addPoints(sharpPoints);
-            }
-        }
-    }
+   
 
 
-    private void OnTriggerEnter(Collider target) {
+   private void OnTriggerEnter(Collider target) {
         if (target.CompareTag(Tags.PLAYER)) {
-            canPressSharp = true;
-            sharpAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION, true);
+            StartCoroutine( QTE.TimerUp(0.06f, 0.02f, sharpAnim, Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION));
         }
     }
 
     private void OnTriggerExit(Collider target) {
         if (target.CompareTag(Tags.PLAYER)) {
-            canPressSharp = false;
-            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_JUMP, false);
+            gameObject.SetActive(false);
             sharpAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_SHARP_ROTATION, false);
         }
     }
+    
 }

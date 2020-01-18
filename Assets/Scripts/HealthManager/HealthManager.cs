@@ -26,7 +26,7 @@ public class HealthManager : MonoBehaviour {
     }
 
 
-    public IEnumerator GettingHurt(Vector3 direction) {
+    public IEnumerator GettingHurt() {
         if (lifeIndicator.fillAmount > 0.25f) {
             lifeIndicator.fillAmount -= 0.25f;
             playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_HURT, true);

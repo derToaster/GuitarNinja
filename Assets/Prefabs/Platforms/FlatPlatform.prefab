@@ -268,6 +268,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HurdleFlat
       objectReference: {fileID: 0}
+    - target: {fileID: 5134676060821793442, guid: 17b01e73e64ac4498845cea8acff871e,
+        type: 3}
+      propertyPath: m_Radius
+      value: 3.82
+      objectReference: {fileID: 0}
     - target: {fileID: 5707053603790758798, guid: 17b01e73e64ac4498845cea8acff871e,
         type: 3}
       propertyPath: m_Size.x

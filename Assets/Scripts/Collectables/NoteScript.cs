@@ -5,8 +5,9 @@ public class NoteScript : MonoBehaviour {
     public bool canPressNote;
     public int notePoints;
     private PointSystem points;
-
+    private GameObject player;
     public KeyCode kickKey;
+    private Cooldown QTE;
 
 
     // Start is called before the first frame update
@@ -14,32 +15,32 @@ public class NoteScript : MonoBehaviour {
         noteAnim = GetComponent<Animator>();
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
         points = FindObjectOfType<PointSystem>();
+        player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+        QTE = FindObjectOfType<Cooldown>();
     }
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(kickKey)) {
-            if (canPressNote) {
-                Debug.Log("Note Hit");
-                playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_KICK, true);
-                noteAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_NOTE_ROTATION, true);
-                points.addPoints(notePoints);
-            }
-        }
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+        
+        
+
     }
 
 
     private void OnTriggerEnter(Collider target) {
         if (target.CompareTag(Tags.PLAYER)) {
-            canPressNote = true;
+            StartCoroutine(QTE.TimerKick(0.08f, 0.02f,noteAnim,Tags.ANIMATION_CONDITION_BOOL_NOTE_ROTATION));
+            
         }
+        
     }
 
     private void OnTriggerExit(Collider target) {
         if (target.CompareTag(Tags.PLAYER)) {
-            canPressNote = false;
+            
 
-            playerAnim.SetBool(Tags.ANIMATION_CONDITION_BOOL_KICK, false);
+
         }
 
         if (target.CompareTag(Tags.NOTE_CATCHER)) {
@@ -47,4 +48,6 @@ public class NoteScript : MonoBehaviour {
             gameObject.SetActive(false);
         }
     }
+
+  
 }

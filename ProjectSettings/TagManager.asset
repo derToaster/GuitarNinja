@@ -27,6 +27,15 @@ TagManager:
   - RestartButton
   - ExitButton
   - Transition
+  - CooldownRing
+  - ArrowUp
+  - ArrowDown
+  - DoubleClick
+  - QTESystem
+  - CoolDownRingArrowUp
+  - CoolDownRingDoubleTap
+  - CoolDownRingArrowDown
+  - testTag
   layers:
   - Default
   - TransparentFX

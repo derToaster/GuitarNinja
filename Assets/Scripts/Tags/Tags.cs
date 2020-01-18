@@ -1,4 +1,6 @@
-﻿public class Tags {
+﻿using System.Security.Permissions;
+
+public class Tags {
 //GameObjectQueue
 
     public static string GAMEOBJECT_QUEUE = "GameObjectQueue";
@@ -42,9 +44,20 @@
 //Buttons
 
     public static string RESTART_BUTTON = "RestartButton";
-    
+//Indicators
+    public static string COOLDOWN_RING_ARROW_UP = "CoolDownRingArrowUp";
+    public static string COOLDOWN_RING_ARROW_DOWN = "CoolDownRingArrowDown";
+    public static string COOLDOWN_RING_DOUBLETAP = "CoolDownRingDoubleTap";
+
+    public static string ARROW_UP = "ArrowUp";
+
+    public static string ARROW_DOWN = "ArrowDown";
+
+    public static string DOUBLECLICK = "DoubleClick";
 //Transition
     public static string TRANSITION = "Transition";
+//QTE System
+    public static string QUICK_TIME_EVENT_SYSTEM = "QTESystem";
 //AnimationControllerConditions
 
     public static string ANIMATION_CONDITION_BOOL_JUMP = "Jump";
