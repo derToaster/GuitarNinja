@@ -21,9 +21,9 @@
             <e p="AudioManager" t="Include">
               <e p="AudioManager.cs" t="Include" />
             </e>
-            <e p="Settings.cs" t="Include" />
-            <e p="SoundsClass" t="Include">
-              <e p="Sound.cs" t="Include" />
+            <e p="MenuAudio" t="Include">
+              <e p="MenuAudioManager.cs" t="Include" />
+              <e p="Settings.cs" t="Include" />
             </e>
           </e>
           <e p="Camera" t="Include">
