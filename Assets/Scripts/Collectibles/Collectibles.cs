@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Collectables : MonoBehaviour {
+public class Collectibles : MonoBehaviour {
     private PointSystem _pointSystem;
     public int pointValue;
     private Animator anim;

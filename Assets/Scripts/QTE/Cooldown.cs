@@ -8,6 +8,7 @@ public class Cooldown : MonoBehaviour {
     private bool canKick, canJump, canSlide, correctHit;
     public int emissionsNote;
     private CollectionEffect sparkle;
+    private Controls controls;
 
     public bool kickSuccess = false,
         jumpSuccess = false,
@@ -30,7 +31,8 @@ public class Cooldown : MonoBehaviour {
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
         points = FindObjectOfType<PointSystem>();
         health = FindObjectOfType<HealthManager>();
-        
+        controls = FindObjectOfType<Controls>();
+
     }
 
     private void Start() {
@@ -185,7 +187,7 @@ public class Cooldown : MonoBehaviour {
 
     private void Update() {
         if (canJump) {
-            if (Input.GetKeyDown(jumpKey)) {
+            if (controls.swipeUp) {
                 Debug.Log("Nice");
                 correctHit = true;
             }
@@ -193,7 +195,7 @@ public class Cooldown : MonoBehaviour {
 
 
         if (canSlide) {
-            if (Input.GetKeyDown(slideKey)) {
+            if (controls.swipeDown) {
                 Debug.Log("Nice");
                 correctHit = true;
             }
@@ -201,7 +203,7 @@ public class Cooldown : MonoBehaviour {
 
 
         if (canKick) {
-            if (Input.GetKeyDown(kickkey)) {
+            if (controls.IsDoubleClick(0.2f)) {
                 Debug.Log("Nice");
                 correctHit = true;
             }

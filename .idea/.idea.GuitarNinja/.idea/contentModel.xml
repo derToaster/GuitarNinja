@@ -5,7 +5,6 @@
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="MoveWithPlayer.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
@@ -29,14 +28,18 @@
           <e p="Camera" t="Include">
             <e p="cameraMovement.cs" t="Include" />
           </e>
-          <e p="Collectables" t="Include">
-            <e p="Collectables.cs" t="Include" />
+          <e p="Collectibles" t="Include">
+            <e p="Collectibles.cs" t="Include" />
             <e p="FlatScript.cs" t="Include" />
+            <e p="MoveWithPlayer.cs" t="Include" />
             <e p="NoteScript.cs" t="Include" />
             <e p="SharpScript.cs" t="Include" />
           </e>
           <e p="Collector" t="Include">
             <e p="Collector.cs" t="Include" />
+          </e>
+          <e p="Controls" t="Include">
+            <e p="Controls.cs" t="Include" />
           </e>
           <e p="GameManager" t="Include">
             <e p="GameManager.cs" t="Include" />
@@ -62,7 +65,6 @@
             <e p="GameObjectQueue.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="Interactions.cs" t="Include" />
             <e p="NoteCatcher.cs" t="Include" />
             <e p="playerMovement.cs" t="Include" />
           </e>
@@ -72,7 +74,6 @@
           <e p="QTE" t="Include">
             <e p="cooldown.cs" t="Include" />
             <e p="Indicators.cs" t="Include" />
-            <e p="QuickTimeEvent.cs" t="Include" />
           </e>
           <e p="Raycasting" t="Include">
             <e p="RayCast.cs" t="Include" />
