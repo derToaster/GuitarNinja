@@ -9,10 +9,7 @@ public class Cooldown : MonoBehaviour {
     public int emissionsNote;
     private CollectionEffect sparkle;
     private Controls controls;
-
-    public bool kickSuccess = false,
-        jumpSuccess = false,
-        slideSuccess = false;
+    
 
     private Image coolDownArrowUp, coolDownArrowDown, coolDownDoubleTap;
     public KeyCode jumpKey, slideKey, kickkey;
@@ -52,7 +49,7 @@ public class Cooldown : MonoBehaviour {
 
 //////////////////////////////////////////////////QTE Jumping////////////////////////////////////////////////////////////
 
-    public IEnumerator TimerUp(float rateOfReduction, float repeatRate, Animator anim, string nameAnimationBool) {
+    public IEnumerator TimerUp(float rateOfReduction, float repeatRate, Animator anim, string nameAnimationBool) { 
         correctHit = false;
         arrowUp.fillAmount = 1f;
         coolDownArrowUp.fillAmount = 1f;
@@ -154,7 +151,7 @@ public class Cooldown : MonoBehaviour {
                 am.PlayHarmonicNote();
                 counter += 1;
 
-                kickSuccess = true;
+
                 timesUp = true;
                 canKick = false;
                 doubleTap.fillAmount = 0f;
@@ -187,7 +184,7 @@ public class Cooldown : MonoBehaviour {
 
     private void Update() {
         if (canJump) {
-            if (controls.swipeUp) {
+            if (controls.swipeUp || Input.GetKeyDown(jumpKey)) {
                 Debug.Log("Nice");
                 correctHit = true;
             }
@@ -195,7 +192,7 @@ public class Cooldown : MonoBehaviour {
 
 
         if (canSlide) {
-            if (controls.swipeDown) {
+            if (controls.swipeDown || Input.GetKeyDown(slideKey)) {
                 Debug.Log("Nice");
                 correctHit = true;
             }
@@ -203,7 +200,7 @@ public class Cooldown : MonoBehaviour {
 
 
         if (canKick) {
-            if (controls.IsDoubleClick(0.2f)) {
+            if (controls.IsDoubleClick(0.2f)|| Input.GetKeyDown(kickkey)) {
                 Debug.Log("Nice");
                 correctHit = true;
             }

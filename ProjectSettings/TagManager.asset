@@ -36,6 +36,12 @@ TagManager:
   - CoolDownRingDoubleTap
   - CoolDownRingArrowDown
   - testTag
+  - HighScorePanel
+  - HighScore
+  - HighScoreList
+  - HighScoreDisplay
+  - Congratulations
+  - NewHighScore
   layers:
   - Default
   - TransparentFX

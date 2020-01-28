@@ -1,21 +1,19 @@
 ﻿using UnityEngine;
 
 public class FlatScript : MonoBehaviour {
-    private Animator flatAnim, playerAnim;
-    public bool canPressFlat;
-    public int flatPoints;
-    private PointSystem points;
+    private Animator flatAnim;
+
+
+
     private Cooldown QTE;
 
-    public KeyCode slideKey;
+
 
 
     // Start is called before the first frame update
     void Start() {
         QTE = FindObjectOfType<Cooldown>();
         flatAnim = GetComponent<Animator>();
-        playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<Animator>();
-        points = FindObjectOfType<PointSystem>();
     }
     
     

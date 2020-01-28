@@ -1,6 +1,4 @@
-﻿using System.Security.Permissions;
-
-public class Tags {
+﻿public class Tags {
 //GameObjectQueue
 
     public static string GAMEOBJECT_QUEUE = "GameObjectQueue";
@@ -31,7 +29,16 @@ public class Tags {
     public static string SHARP = "Sharp";
     public static string HITBOX = "Hitbox";
 
+//Highscore 
+    public static string HIGHSCORE_PANEL = "HighScorePanel";
 
+    public static string HIGHSCORE = "HighScore";
+
+    public static string HIGHSCORE_LIST = "HighScoreList";
+    public static string CONGRATULATIONS_DISPLAY = "Congratulations";
+    public static string NEWHIGHSCORE = "NewHighScore";
+
+    public static string HIGHSCORE_DISPLAY = "HighScoreDisplay";
 //Collector
 
     public static string COLLECTOR = "GarbageCollector";
@@ -57,9 +64,14 @@ public class Tags {
 //Transition
     public static string TRANSITION = "Transition";
 //QTE System
-    public static string QUICK_TIME_EVENT_SYSTEM = "QTESystem";
-//AnimationControllerConditions
+    public static string QUICK_TIME_EVENT_SYSTEM = "QTESystem"; 
+//PlayerPrefs
+    public static string SESSIONSCORES = "SessionPoints";
 
+    public static string HIGHSCORES = "HighscorePoints";
+    
+//AnimationControllerConditions
+    public static string HIGHSCORE_TRANSITION_TRIGGER = "HighscoreTransition";
     public static string ANIMATION_CONDITION_BOOL_JUMP = "Jump";
     public static string ANIMATION_CONDITION_BOOL_SLIDE = "Slide";
     public static string ANIMATION_CONDITION_BOOL_KICK = "Kick";

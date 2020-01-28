@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NoteScript : MonoBehaviour {
 
@@ -19,7 +18,7 @@ public class NoteScript : MonoBehaviour {
     // Update is called once per frame
 
     private void Update() {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z); // following the player on the x axis
     }
 
     private void OnTriggerEnter(Collider target) {

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuAudioManager : MonoBehaviour {
@@ -14,7 +13,7 @@ public class MenuAudioManager : MonoBehaviour {
     // Update is called once per frame
 
 
-    public void PlayMenuButtonSounds() {
+    public void PlayMenuButtonSounds() { 
 
         audio.clip = buttonSounds[Random.Range(0, buttonSounds.Count)];
         audio.PlayOneShot(audio.clip);

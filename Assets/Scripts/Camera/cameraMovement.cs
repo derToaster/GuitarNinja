@@ -12,7 +12,7 @@ public class cameraMovement : MonoBehaviour {
 
 
     // Start is called before the first frame update
-    void Start() {
+    void Awake() {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         startOffset = transform.position - playerTransform.position;

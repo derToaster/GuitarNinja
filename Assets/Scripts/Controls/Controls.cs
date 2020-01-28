@@ -3,7 +3,7 @@
 
 public class Controls : MonoBehaviour {
     public bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
-    private bool isDraging = false;
+    private bool isDraging;
     private float lastTimer, currentTimer;
     private int clickCounter;
 
@@ -11,11 +11,7 @@ public class Controls : MonoBehaviour {
     private Vector2 startTouch;
 
     public Vector2 swipeDelta;
-
-    // Start is called before the first frame update
-    void Start() {
-    }
-
+    
     // Update is called once per frame
     void Update() {
         tap = swipeLeft = swipeRight = swipeDown = swipeUp = false;

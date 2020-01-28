@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Collector : MonoBehaviour {
     private ObjectSpawner objectSpawner;
@@ -10,7 +8,7 @@ public class Collector : MonoBehaviour {
         objectSpawner = FindObjectOfType<ObjectSpawner>();
     }
 
-    private void OnTriggerEnter(Collider target) {
+    private void OnTriggerEnter(Collider target) {   // Collector deactivates the gameobjects and initiates the objectSpawner
         if (target.CompareTag(Tags.EMPTY_PLATFORM) ||
             target.CompareTag(Tags.NOTE_PLATFORM) ||
             target.CompareTag(Tags.COL_PLAT_MID) ||
