@@ -8,17 +8,17 @@ public class NoteScript : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-       
-       
 
-        player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+
+        player = GameObject.FindGameObjectWithTag(Tags.PLAYER); 
+
         QTE = FindObjectOfType<Cooldown>();
     }
 
     // Update is called once per frame
 
     private void Update() {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z); // following the player on the x axis
+        this.transform.position = new Vector3(player.transform.position.x, this.transform.position.y, this.transform.position.z);
     }
 
     private void OnTriggerEnter(Collider target) {

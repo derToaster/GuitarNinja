@@ -1,12 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour {
     private AudioSource audio;
     private bool rightFoot, subDominant, isAlive;
     private Cooldown QTE;
     public float timeBetweenSteps = 0.3f;
+    private playerMovement move;
+    private IEnumerator backgroundMusic;
+
 
 
 
@@ -31,13 +36,21 @@ public class AudioManager : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         audio = GetComponent<AudioSource>();
-        isAlive = FindObjectOfType<playerMovement>().isAlive;
-        QTE = FindObjectOfType<Cooldown>();
-        StartCoroutine(PlayFootstepSounds());
 
+        QTE = FindObjectOfType<Cooldown>();
+        move = FindObjectOfType<playerMovement>();
+        move.isAlive = true;
+        backgroundMusic = PlayFootstepSounds();
+        StartCoroutine(backgroundMusic);
     }
 
     // Update is called once per frame
+    private void Update() {
+        if (!move.isAlive) {
+            StopCoroutine(backgroundMusic);
+            
+        }
+    }
 
     public void PlayPentatonicNote() {
         audio.clip = pentatonicClips[Random.Range(0, pentatonicClips.Count)];
@@ -89,8 +102,8 @@ public class AudioManager : MonoBehaviour {
         audio.clip = sdRightFootstepClips[Random.Range(0, sdRightFootstepClips.Count)];
         audio.PlayOneShot(audio.clip, footstepVolume);
     }
-    public IEnumerator PlayFootstepSounds() { // continuously playing the footsteprhythm while player is alive
-        while (isAlive) {
+    private IEnumerator PlayFootstepSounds() { // continuously playing the footsteprhythm while player is alive
+        while (true) {
             rightFoot = !rightFoot;
             if (QTE.counter == Random.Range(3, 15)) {
                 subDominant = true;

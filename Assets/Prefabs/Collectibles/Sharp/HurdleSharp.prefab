@@ -124,7 +124,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.64, y: 6.869409, z: 8.911701}
+  m_Size: {x: 8.61, y: 6.869409, z: 8.911701}
   m_Center: {x: -1.53, y: -0.08339262, z: 0.27932262}
 --- !u!95 &-7683904995639050643
 Animator:
@@ -157,9 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20f6a567a0a14d1ea860829f9f9aa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPressSharp: 0
-  sharpPoints: 5
-  jumpKey: 273
 --- !u!1 &7828155975102316985
 GameObject:
   m_ObjectHideFlags: 0
